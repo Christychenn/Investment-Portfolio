@@ -1,11 +1,11 @@
-# Investment Portfolio
+# Investment Portfolio Tracker
 
 #### Video Demo:  <https://youtu.be/cjCBwqkeRaI>
 
 #### Description:
 This is a program that tracks the current market value of your stock portfolio, especially for people who have several brokerage accounts!
 
-You can look up the latest stocks prices, calculate your total assets, create a pie chart, and save the result as a CSV file.
+You can look up the latest stock prices, calculate your total assets, create a pie chart, and save the result as a CSV file.
 
 ## How To Use
 1. Install the required packages listed in [requirements.txt](requirements.txt)
@@ -14,7 +14,7 @@ You can look up the latest stocks prices, calculate your total assets, create a 
     pip install -r requirements.txt
     ```
 
-2. Sign up for a free API key at [Twelve data](https://twelvedata.com/)
+2. Sign up for a free API key at [Twelve Data](https://twelvedata.com/)
 
 3. Set your API key as an environment variable named `TWELVE_DATA_API_KEY`
 - GitHub Codespaces : Add a new secret in your codespace.
@@ -27,7 +27,7 @@ Follow the [GitHub Codespaces secrets guide](https://docs.github.com/en/codespac
 
 4. There are two modes in this program:
 
-- (1) If you already have a csv file, this program can read the data in your file.
+- (1) If you already have a CSV file, this program can read the data in your file.
     This file must use this format:
     ```
     Stock,Shares
@@ -61,7 +61,7 @@ Follow the [GitHub Codespaces secrets guide](https://docs.github.com/en/codespac
 
 #### Getting the holdings through a CSV file or user input.
 
-`main()`: Decides the mode user select by the length of sys.argv. Prints the `portfolio` and `sum_list` as two tables. Calls `chart()` and `save_csv()`
+`main()`: Decides the mode the user selects by the length of sys.argv. Prints the `portfolio` and `sum_list` as two tables. Calls `chart()` and `save_csv()`
 
 `csv_reader()`: Takes a CSV file name from `main()` and reads each row of the file into a list called `portfolio`. It uses `is_valid_ticker()` and `is_valid_number()` to check that each stock symbol and number of shares are valid. It then calls `search_price()` to look up the latest price for each stock. If a price cannot be found, the program exits. Otherwise, the stock's market value is added to the total. Finally, it returns `portfolio` and `sum_list` to `main()`.
 
@@ -118,7 +118,7 @@ pytest test_project.py
 
 ### requirements.txt
 
-You should install requests, matplotlib, tabulate to make this program work!
+You should install requests, matplotlib, and tabulate to make this program work!
 
 
 ## Design Choices
